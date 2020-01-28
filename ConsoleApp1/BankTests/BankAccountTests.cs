@@ -43,6 +43,11 @@ namespace BankTests
             double debitAmount = 20.0;
             BankAccount account = new BankAccount("Mr. Bryan Walton", beginningBalance);
 
+
+            //Here was a problem to solve which is getting fail when there is exception.
+            //Exception is coming here but it is not calling as a Fail cause of catch.
+            //To solve it we need return to end of catch to continue executing and
+            //Assert.Fail end of the code block.
             // Act
             try
             {
